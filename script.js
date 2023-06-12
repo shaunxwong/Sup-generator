@@ -1,59 +1,70 @@
-// Get references to the #generate element and password textarea
-var generateBtn = document.querySelector("#generate");
-var passwordText = document.querySelector("#password");
+// Get references to the necessary DOM elements
+let generateBtn = document.querySelector("#generate");
+let copyBtn = document.querySelector("#copy");
+let passwordText = document.querySelector("#password");
+let lengthInput = document.querySelector("#length");
+let lengthValue = document.querySelector("#lengthValue");
 
-// Write password to the #password textarea
+// Function to write the generated password to the password textarea
 function writePassword() {
-  var password = generatePassword();
+  let password = generatePassword();
   passwordText.value = password;
 }
 
 // Function to generate the password based on user criteria
 function generatePassword() {
-  var password = "";
+  let password = "";
 
-  // Prompt for password length
-  var length = parseInt(prompt("Enter the length of the password (between 8 and 128 characters):"));
+  // Get the password length from the length input element
+  let length = parseInt(lengthInput.value);
+
+  // Get the checkbox elements for character types
+  let lowercaseCheckbox = document.querySelector("#lowercase");
+  let uppercaseCheckbox = document.querySelector("#uppercase");
+  let numericCheckbox = document.querySelector("#numeric");
+  let specialCheckbox = document.querySelector("#special");
+
+  // Validate password length
   if (isNaN(length) || length < 8 || length > 128) {
     alert("Invalid password length. Please enter a number between 8 and 128.");
     return;
   }
 
-  // Prompt for character types to include
-  var includeLowercase = confirm("Include lowercase characters?");
-  var includeUppercase = confirm("Include uppercase characters?");
-  var includeNumeric = confirm("Include numeric characters?");
-  var includeSpecial = confirm("Include special characters?");
-
-  // Validate at least one character type is selected
-  if (!includeLowercase && !includeUppercase && !includeNumeric && !includeSpecial) {
+  // Check if at least one character type is selected
+  if (
+    !lowercaseCheckbox.checked &&
+    !uppercaseCheckbox.checked &&
+    !numericCheckbox.checked &&
+    !specialCheckbox.checked
+  ) {
     alert("You must select at least one character type.");
     return;
   }
 
-  // Define character pools based on user selection
-  var lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
-  var uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  var numericChars = "0123456789";
-  var specialChars = "!@#$%^&*()_+~`|}{[]:;?><,./-=";
+  // Define character pools for each character type
+  let lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
+  let uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  let numericChars = "0123456789";
+  let specialChars = "!@#$%^&*()_+~`|}{[]:;?><,./-=";
 
-  // Generate the password based on user criteria
-  var availableChars = "";
-  if (includeLowercase) {
+  // Create the available characters string based on checkbox selections
+  let availableChars = "";
+  if (lowercaseCheckbox.checked) {
     availableChars += lowercaseChars;
   }
-  if (includeUppercase) {
+  if (uppercaseCheckbox.checked) {
     availableChars += uppercaseChars;
   }
-  if (includeNumeric) {
+  if (numericCheckbox.checked) {
     availableChars += numericChars;
   }
-  if (includeSpecial) {
+  if (specialCheckbox.checked) {
     availableChars += specialChars;
   }
 
-  for (var i = 0; i < length; i++) {
-    var randomIndex = Math.floor(Math.random() * availableChars.length);
+  // Generate the password based on user criteria
+  for (let i = 0; i < length; i++) {
+    let randomIndex = Math.floor(Math.random() * availableChars.length);
     password += availableChars.charAt(randomIndex);
   }
 
@@ -61,5 +72,14 @@ function generatePassword() {
   return password;
 }
 
-// Add event listener to generate button
+// Function to update the displayed value of the password length slider
+function updateLengthValue() {
+  lengthValue.textContent = lengthInput.value;
+}
+
+// Add event listeners for button click and slider input
 generateBtn.addEventListener("click", writePassword);
+lengthInput.addEventListener("input", updateLengthValue);
+
+// Update the displayed value of the password length initially
+updateLengthValue();
