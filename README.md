@@ -30,7 +30,8 @@ To meet the acceptance criteria and ensure a robust solution, the password gener
 
 6. **Password Display:** The generated password is either displayed in an alert or written to the page, providing the user with their new secure password.
 
-https://github.com/shaunxwong/Sup-generator/assets/30486734/ec9ed770-fe44-4e17-b936-664d697d9c5b
+
+![SUP-Generator](https://github.com/shaunxwong/Sup-generator/assets/30486734/e156528c-ad77-4924-ad3c-5b153b20d02f)
 
 ## Submission Details
 
