@@ -36,7 +36,7 @@ To meet the acceptance criteria and ensure a robust solution, the password gener
 
 As part of my submission, I have completed the following:
 
-1. **Deployed Application:** The Password Generator web application can be accessed at [Password Generator](https://example.com](https://github.com/shaunxwong/Sup-generator.git).
+1. **Deployed Application:** The Password Generator web application can be accessed at [Password Generator](https://github.com/shaunxwong/Sup-generator.git).
 
 2. **GitHub Repository:** The codebase for the Password Generator is available in the following GitHub repository: [Password Generator Repository](https://shaunxwong.github.io/Sup-generator/).
 
