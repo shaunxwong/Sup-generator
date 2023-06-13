@@ -452,6 +452,7 @@
             padding-bottom: 7vw;
         }
 
+    
         .mT-250 {
             margin-top: 18vw;
         }
@@ -531,7 +532,6 @@
         }
 
 
-
         /*--- ---*/
         /*--- HEADER ---*/
         .mainHeader {
@@ -575,33 +575,42 @@
             padding: 0 2vw;
         }
 
+        
+        .btn{
+            position: fixed;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 20px;
+
+        }
+       
         .containerV {
             padding-top: 7vw;
             padding-bottom: 7vw;
         }
 
         .mT-250 {
-            margin-top: 15vw;
+            margin-top: 5vw;
         }
 
         .mT-50 {
-            margin-top: 8vw;
-        }
-
-        .mT-30 {
-            margin-top: 4vw;
-        }
-
-        .mT-20 {
             margin-top: 3vw;
         }
 
-        .mT-15 {
+        .mT-30 {
             margin-top: 2vw;
         }
 
+        .mT-20 {
+            margin-top: 1vw;
+        }
+
+        .mT-15 {
+            margin-top: .5vw;
+        }
+
         .mT-10 {
-            margin-top: 1.5vw;
+            margin-top: .2vw;
         }
 
         
@@ -625,64 +634,41 @@
 
         /*-- Fonts --*/
         .font-128 {
-            font-size: 12.8vw;
+            font-size: 4vw;
         }
 
         .font-96 {
-            font-size: 9.6vw;
-        }
-
-        .font-64 {
-            font-size: 6.4vw;
-        }
-
-        .font-32 {
-            font-size: 4.2vw;
-        }
-
-        .font-24 {
             font-size: 3.6vw;
         }
 
+        .font-64 {
+            font-size:3.2vw;
+        }
+
+        .font-32 {
+            font-size: 2.5vw
+        }
+
+        .font-24 {
+            font-size: 2.1vw;
+        }
+
         .font-22 {
-            font-size: 3.4vw;
+            font-size: 1.8vw;
         }
 
         .font-20 {
-            font-size: 3.2vw;
+            font-size: 1.6vw;
         }
 
         .font-18 {
-            font-size: 3vw;
+            font-size: 1.3vw;
         }
 
         .font-16 {
-            font-size: 2.8vw;
+            font-size: 1vw;
         }
 
-
-
-        /*--- ---*/
-        /*--- HEADER ---*/
-        .mainHeader {
-            padding-top: 35vw;
-            padding-bottom: 15vw;
-        }
-
-        .mainHeader .branding {
-            margin-top: 5vw;
-        }
-
-        .mainHeader .branding .logo1 {
-            width: 30vw;
-            height: 8vw;
-            margin: 0 5vw;
-        }
-
-        .mainHeader .branding .logo2 {
-            width: 25vw;
-            height: 8vw;
-        }
 
         /*--- ---*/
         /*--- Hero ---*/
@@ -696,10 +682,14 @@
         }
 
         .hero-wrapper-img {
-            width: 100%;
-            margin: 10vw 0;
-        }
+            width:100%;
+            }
 
+        .hero-wrapper-img img {
+                width: 20%;
+            }
+        
+        
         .hero-wrapper-img .star {
             width: 20vw;
             height: 20vw;
