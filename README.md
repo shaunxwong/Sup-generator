@@ -30,7 +30,7 @@ To meet the acceptance criteria and ensure a robust solution, the password gener
 
 6. **Password Display:** The generated password is either displayed in an alert or written to the page, providing the user with their new secure password.
 
-![Password Generator](./Assets/03-javascript-homework-demo.png)
+![Password Generator]
 
 ## Submission Details
 
