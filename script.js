@@ -10,8 +10,6 @@ function writePassword() {
   let password = generatePassword();
   passwordText.value = password;
 }
-
-// Function to generate the password based on user criteria
 function generatePassword() {
   let password = "";
 
@@ -24,7 +22,7 @@ function generatePassword() {
   let numericCheckbox = document.querySelector("#numeric");
   let specialCheckbox = document.querySelector("#special");
 
-  // Validate password length
+  // Validate password length. Set a if condition if not a number OR lenght is less than 8 OR length more than 128 return with a prompt.
   if (isNaN(length) || length < 8 || length > 128) {
     alert("Invalid password length. Please enter a number between 8 and 128.");
     return;
@@ -41,13 +39,13 @@ function generatePassword() {
     return;
   }
 
-  // Define character pools for each character type
+  // Define character pools for each character type.
   let lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
   let uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   let numericChars = "0123456789";
   let specialChars = "!@#$%^&*()_+~`|}{[]:;?><,./-=";
 
-  // Create the available characters string based on checkbox selections
+  // 
   let availableChars = "";
   if (lowercaseCheckbox.checked) {
     availableChars += lowercaseChars;
@@ -62,7 +60,7 @@ function generatePassword() {
     availableChars += specialChars;
   }
 
-  // Generate the password based on user criteria
+  // Generate the password based on user criteria. 
   for (let i = 0; i < length; i++) {
     let randomIndex = Math.floor(Math.random() * availableChars.length);
     password += availableChars.charAt(randomIndex);
