@@ -18,7 +18,7 @@ function generatePassword() {
 
   // Get the checkbox elements for character types
   let lowercaseCheckbox = document.querySelector("#lowercase");
-  let uppercaseCheckbox = document.querySelectorwod("#uppercase");
+  let uppercaseCheckbox = document.querySelector("#uppercase");
   let numericCheckbox = document.querySelector("#numeric");
   let specialCheckbox = document.querySelector("#special");
 
